@@ -52,7 +52,9 @@ class Orthograph():
                 if res:
                     results.extend(res)
                 else:
-                    results = None
+                    results = []    # Changed from None that sometime caused exception 
+                                    # .. not sure what the precondition for res == False is
+                                    # .. but it's unlikely that we really want to crash.
         return results
 
     def _listen_print_loop(self, responses, stream):
