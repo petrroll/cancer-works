@@ -1,8 +1,5 @@
 import fire
-import unidecode
 
-from tts import DummyVoice
-from stt import Orthograph
 from lm import CharRNNWrapper
 
 def get_prime_texts():
